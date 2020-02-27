@@ -1,4 +1,6 @@
 <?php
+// Max Base
+// https://github.com/BaseMax/CoronaVirusDatabase
 require_once "_netphp.php";
 require_once "_phpedb.php";
 $fileName="response.json";
