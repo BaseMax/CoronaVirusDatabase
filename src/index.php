@@ -92,7 +92,8 @@ if($headers != null && is_array($headers) and count($headers) > 0) {
 					if($tokenItem["canTotal"] == 1) {
 						$all=$db->sum("country", "totalCase");
 						$died=$db->sum("country", "totalDeath");
-						display(["status"=>"success", "message"=>"", "result"=>["all"=>$all, "died"=>$died]]);
+						$recov=$db->sum("country", "totalRecovered");
+						display(["status"=>"success", "message"=>"", "result"=>["all"=>$all, "died"=>$died, "recovered"=>$recov]]);
 					}
 					else {
 						display(["status"=>"failed", "message"=>"Sorry, you did not have access to this method!"]);

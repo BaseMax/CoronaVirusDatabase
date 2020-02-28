@@ -4,7 +4,7 @@ if(!defined("BASE")) {
 }
 require_once "_phpedb.php";
 $db=new database();
-$db->connect("localhost", "root", "linuxconfig.org");
+$db->connect("localhost", "root", "****");
 $db->db="corona2";
 $db->create_database($db->db, false);
 function display($array) {
