@@ -22,6 +22,133 @@ https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/ncov_cases/Fe
 
 But you can see all requests as HAR format at [here](requests.har).
 
+
+## Features
+
+- Free, Open Source, Easy and short code
+- Ability to create token for suers
+- Ability to search in country
+- Ability to sort (ASC or DESC) in country list
+- Ability to get total number (in world)
+- Ability to limit auth and token
+
+## COVID19 API
+
+All request need `token` value in header, You can create `token` in **token** table.
+
+### Country List
+
+**GET:** http://localhost/CoronaVirusDatabase/?method=list
+
+**POST:** http://localhost/CoronaVirusDatabase/ with `method=list` data
+
+```json
+{
+	status: "success",
+	message: "",
+	lastUpdate: "2020-02-27 18:05:06",
+	result: [
+		{
+		id: 1,
+		name: "china",
+		totalCase: 78514,
+		newCase: 450,
+		totalDeath: 2747,
+		newDeath: 32,
+		totalRecovered: 32954,
+		seriousUser: 8346,
+		datetime: "2020-02-27 18:05:03"
+		},
+		...
+	]
+}
+```
+
+### Country List with Sort
+
+##### DESC sort:
+
+**GET:** http://localhost/CoronaVirusDatabase/?method=list&sort=totalCase&type=desc
+
+**POST:** http://localhost/CoronaVirusDatabase/ with `method=list&sort=totalCase&type=desc` data
+
+##### or ASC sort:
+
+**GET:** http://localhost/CoronaVirusDatabase/?method=list&sort=totalCase&type=asc
+
+**POST:** http://localhost/CoronaVirusDatabase/ with `method=list&sort=totalCase&type=asc` data
+
+### Search in country
+
+**GET:** http://localhost/CoronaVirusDatabase/?method=search&query=ir
+
+**POST:** http://localhost/CoronaVirusDatabase/ with `method=search&query=ir`
+
+```json
+{
+	status: "success",
+	message: "",
+	result: [
+		{
+			id: 5,
+			name: "iran",
+			totalCase: 245,
+			newCase: 106,
+			totalDeath: 26,
+			newDeath: 7,
+			totalRecovered: 25,
+			seriousUser: 0,
+			datetime: "2020-02-27 16:05:56"
+		},
+		{
+			id: 24,
+			name: "iraq",
+			totalCase: 6,
+			newCase: 1,
+			totalDeath: 0,
+			newDeath: 0,
+			totalRecovered: 0,
+			seriousUser: 0,
+			datetime: "2020-02-27 16:05:59"
+		}
+	]
+}
+```
+
+### Search in country with sort
+
+**GET:** http://localhost/CoronaVirusDatabase/?method=search&query=ir&sort=totalCase&type=asc
+
+**POST:** http://localhost/CoronaVirusDatabase/ with `method=search&query=ir&sort=totalCase&type=asc` data
+
+
+### Total numbers in all country and in the world
+
+**GET:** http://localhost/CoronaVirusDatabase/?method=total
+
+**POST:** http://localhost/CoronaVirusDatabase/ with `method=total`
+
+```json
+{
+	status: "success",
+	message: "",
+	result: {
+		all: "163492",
+		died: "5588"
+	}
+}
+```
+
+## Installing / Using from COVID19 API
+
+- Download source files
+- Upload sources files in a webserver (e.g: `/var/www/html` or `/usr/share/nginx/html` or ...)
+- Create a database for this project
+- Put username, password and database name in `_core.php` file and config this project by modify `_core.php` file
+- Import `corona.sql` file into your database (using phpmyadmin or mariadb, mysql cli or other tools)
+
+> Note: corona.sql is database structure with empty table, you will use it to setup this project. But output.sql is a database output with current corona data.
+
 ## How keep data live and up to date?
 
 Run `$ php _update.php update` every time you want to update your database rows.
