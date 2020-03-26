@@ -1,5 +1,3 @@
-# Matno Contest - Back-End Programming
-
 # Corona Virus Database
 
 A repository for analyzing references and database of `gisanddata.maps.arcgis.com` website for Corona Virus.
