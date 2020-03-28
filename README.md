@@ -79,7 +79,7 @@ All request need `token` value in header, You can create `token` in **token** ta
 
 ### Country List
 
-**GET:** http://localhost/CoronaVirusDatabase/?method=list
+**GET:** http://localhost/CoronaVirusDatabase/src/?method=list
 
 **POST:** http://localhost/CoronaVirusDatabase/ with `method=list` data
 
@@ -109,19 +109,19 @@ All request need `token` value in header, You can create `token` in **token** ta
 
 ##### DESC sort:
 
-**GET:** http://localhost/CoronaVirusDatabase/?method=list&sort=totalCase&type=desc
+**GET:** http://localhost/CoronaVirusDatabase/src/?method=list&sort=totalCase&type=desc
 
 **POST:** http://localhost/CoronaVirusDatabase/ with `method=list&sort=totalCase&type=desc` data
 
 ##### or ASC sort:
 
-**GET:** http://localhost/CoronaVirusDatabase/?method=list&sort=totalCase&type=asc
+**GET:** http://localhost/CoronaVirusDatabase/src/?method=list&sort=totalCase&type=asc
 
 **POST:** http://localhost/CoronaVirusDatabase/ with `method=list&sort=totalCase&type=asc` data
 
 ### Search in country
 
-**GET:** http://localhost/CoronaVirusDatabase/?method=search&query=ir
+**GET:** http://localhost/CoronaVirusDatabase/src/?method=search&query=ir
 
 **POST:** http://localhost/CoronaVirusDatabase/ with `method=search&query=ir`
 
@@ -158,14 +158,14 @@ All request need `token` value in header, You can create `token` in **token** ta
 
 ### Search in country with sort
 
-**GET:** http://localhost/CoronaVirusDatabase/?method=search&query=ir&sort=totalCase&type=asc
+**GET:** http://localhost/CoronaVirusDatabase/src/?method=search&query=ir&sort=totalCase&type=asc
 
 **POST:** http://localhost/CoronaVirusDatabase/ with `method=search&query=ir&sort=totalCase&type=asc` data
 
 
 ### Total numbers in all country and in the world
 
-**GET:** http://localhost/CoronaVirusDatabase/?method=total
+**GET:** http://localhost/CoronaVirusDatabase/src/?method=total
 
 **POST:** http://localhost/CoronaVirusDatabase/ with `method=total`
 
