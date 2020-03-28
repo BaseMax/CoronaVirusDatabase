@@ -2,6 +2,16 @@
 
 ### An API to lookup information about Corona Virus
 
+This package provides an API to lookup information about Corona Virus.
+
+It can provides API entries to perform queries on a database with figures about the current status of the Corona Virus epidemic around the world. Currently it can:
+
+- Return the number of reported cases
+- Return the number of reported deaths
+- Return the number of recovered people
+- Filter the results by country
+- Return results aggregating all countries
+
 # Corona Virus Database
 
 A repository for analyzing references and database of `gisanddata.maps.arcgis.com` website for Corona Virus.
