@@ -59,7 +59,7 @@ https://github.com/BaseMax/CoronaVirusOutbreakAPI/
 
 Create a token in database:
 
-![screen1.jpg](screen1.jpg)
+![screen2.jpg](screen2.jpg)
 
 ## Development Mode
 
@@ -71,7 +71,7 @@ https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnf
 
 You had to add `Token` header with a value.
 
-![screen2.jpg](screen2.jpg)
+![screen1.jpg](screen1.jpg)
 
 ## COVID19 API
 
