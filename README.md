@@ -30,6 +30,32 @@ But you can see all requests as HAR format at [here](requests.har).
 - Ability to get total number (in world)
 - Ability to limit auth and token
 
+## Description
+
+This project is a web service that allows you to create different accesses.
+
+And later use this web service in different applications and sites.
+e.g: You may even sell a subscription to this web service.
+
+All request of this web-service will need a token for Auth and access to methods.
+
+There is a table for tokens, called `token`.
+So you can create one token or more.
+
+In `READMD.me` file, I explain how can use from web service.
+
+So others can using this key to access to this web-service.
+
+You will need to execute `$ php _update.php update` in src/ directory to insert and updates data into your database, then you can use from API methods.
+(You should pass token value in Headers)
+
+Remember it's a API service, if are you looking for a script to display directly list of corona cases, you can check below repositories:
+
+https://github.com/BaseMax/api-webservice-COVID-19/
+
+https://github.com/BaseMax/CoronaVirusOutbreakAPI/
+
+
 ## COVID19 API
 
 All request need `token` value in header, You can create `token` in **token** table.
