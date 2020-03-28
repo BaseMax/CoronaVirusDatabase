@@ -55,6 +55,23 @@ https://github.com/BaseMax/api-webservice-COVID-19/
 
 https://github.com/BaseMax/CoronaVirusOutbreakAPI/
 
+## Using
+
+Create a token in database:
+
+![screen1.jpg](screen1.jpg)
+
+## Development Mode
+
+In additation of my message:
+If you want to use this API webservice, And want to easily see response of methods.
+
+You can use a plugins in your browser. such as:
+https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj?hl=en
+
+You had to add `Token` header with a value.
+
+![screen2.jpg](screen2.jpg)
 
 ## COVID19 API
 
